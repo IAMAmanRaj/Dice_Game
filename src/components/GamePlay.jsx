@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import NumberSelector from "./NumberSelector";
 import TotalScore from "./TotalScore";
-import RoleDice from "./RoleDice";
+import RollDice from "./RollDice";
 import { useState } from "react";
 import { Button, OutlineButton } from "../styled/Button";
 import Rules from "./Rules";
@@ -17,7 +17,7 @@ const GamePlay = () => {
     return Math.floor(Math.random() * (max - min) + min);
   };
 
-  const roleDice = () => {
+  const rollDice = () => {
     if (!selectedNumber) {
       setError("You have not selected any number");
       return;
@@ -50,7 +50,7 @@ const GamePlay = () => {
           setSelectedNumber={setSelectedNumber}
         />
       </div>
-      <RoleDice currentDice={currentDice} roleDice={roleDice} />
+      <RollDice currentDice={currentDice} rollDice={rollDice} />
       <div className="btns">
         <OutlineButton onClick={resetScore}>Reset Score</OutlineButton>
         <Button onClick={() => setShowRules((prev) => !prev)}>
