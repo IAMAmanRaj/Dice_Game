@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StartGame from "./components/StartGame";
 import GamePlay from "./components/GamePlay";
+import ResponsiveWrapper from "./components/ResponsiveWrapper";
 
 function App() {
   const [isGameStarted, setIsGameStarted] = useState(false);
@@ -10,7 +11,9 @@ function App() {
   };
 
   return (
-    <>{isGameStarted ? <GamePlay /> : <StartGame toggle={toggleGamePlay} />}</>
+    <ResponsiveWrapper>
+      {isGameStarted ? <GamePlay /> : <StartGame toggle={toggleGamePlay} />}
+    </ResponsiveWrapper>
   );
 }
 

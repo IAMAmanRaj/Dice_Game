@@ -24,6 +24,10 @@ const Container = styled.div`
   margin: 0 auto;
   align-items: center;
 
+  @media (max-width: 1024px) {
+  flex-direction: column;
+}
+
   .content {
     h1 {
       font-size: 96px;
